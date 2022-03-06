@@ -1,0 +1,54 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "vux",
+    "password": "123456",
+    "email": "vux@gmail.com"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "sosha",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYjBlY2Y3YTlhYzgxY2NiY2VlZGUiLCJpYXQiOjE2NDU0NTc2NDR9.CJt__FCzhRIRTH3g1bgF4V83fYqmxngzHWgXpLdJMwM
+
+{
+    "title": "Khóa học NodeJs",
+    "description": "Khóa học NodeJs",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYjBlY2Y3YTlhYzgxY2NiY2VlZGUiLCJpYXQiOjE2NDU0NTc2NDR9.CJt__FCzhRIRTH3g1bgF4V83fYqmxngzHWgXpLdJMwM
+
+###
+
+PUT http://localhost:5000/api/posts/6213c98ec97c346e493845f1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYjBlY2Y3YTlhYzgxY2NiY2VlZGUiLCJpYXQiOjE2NDU0NTc2NDR9.CJt__FCzhRIRTH3g1bgF4V83fYqmxngzHWgXpLdJMwM
+
+{
+    "title": "Vue course",
+    "description": "This is VueJs course",
+    "url": "vue.org",
+    "status": "LEARNED"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/6213b131f7a9ac81ccbceee0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjEzYjBlY2Y3YTlhYzgxY2NiY2VlZGUiLCJpYXQiOjE2NDU0NTc2NDR9.CJt__FCzhRIRTH3g1bgF4V83fYqmxngzHWgXpLdJMwM
